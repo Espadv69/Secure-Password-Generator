@@ -1,41 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Secure Password Generator with JsVanilla</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
   </head>
+
   <body>
     <main class="app">
       <h1 class="h1-title">Secure Password Generator</h1>
-      <label>Password Length:
-        <input type="number" class="length" min="6" max="20" value="12">
+      <label
+        >Password Length:
+        <input type="number" class="length" min="6" max="20" value="12" />
       </label>
 
       <div class="checkbox-container">
         <label>
-          <input type="checkbox" class="include-lowercase" checked>
+          <input type="checkbox" class="include-lowercase" checked />
           Include lowercase letters
         </label>
         <label>
-          <input type="checkbox" class="include-uppercase" checked>
+          <input type="checkbox" class="include-uppercase" checked />
           Include uppercase letters
         </label>
         <label>
-          <input type="checkbox" class="include-numbers" checked>
+          <input type="checkbox" class="include-numbers" checked />
           Include numbers
         </label>
         <label>
-          <input type="checkbox" class="include-symbols">
+          <input type="checkbox" class="include-symbols" />
           Include symbols
         </label>
       </div>
 
       <button class="generate-password">Generate Password</button>
       <button class="copy-password">Copy to Clipboard</button>
-      <p class="p-alert"></p>
-      <div class="password-display"></div>
+      <div class="alert-pass-display">
+        <p class="p-alert"></p>
+        <div class="password-display"></div>
+      </div>
     </main>
 
     <script src="./main.js"></script>
