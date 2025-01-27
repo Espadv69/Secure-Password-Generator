@@ -29,6 +29,12 @@ const generatePassword = () => {
 
   // Validate that at leats one option is selected
   if (Object.values(options).every((option) => !option)) {
-    return $p_alert.textContent = 'Please select at least one character type'
+    return ($p_alert.textContent = 'Please select at least one character type')
+  }
+
+  // Validate that the length is within the valid range
+  if (length < 6 || length > 6) {
+    return ($p_alert.textContent =
+      'Password length must be between 6 and 20 characters')
   }
 }
