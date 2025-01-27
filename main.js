@@ -33,7 +33,7 @@ const generatePassword = () => {
   }
 
   // Validate that the length is within the valid range
-  if (length < 6 || length > 6) {
+  if (length < 6 || length > 20) {
     return ($p_alert.textContent =
       'Password length must be between 6 and 20 characters')
   }
