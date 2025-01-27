@@ -37,4 +37,11 @@ const generatePassword = () => {
     return ($p_alert.textContent =
       'Password length must be between 6 and 20 characters')
   }
+
+  // Build the pool of availble characters based on selected options
+  let availbleChars = ''
+  if (options.lowercase) availbleChars += lowercaseChars // Add lowercase letters if selected
+  if (options.uppercase) availbleChars += uppercaseChars // Add uppercase letters if selected
+  if (options.numbers) availbleChars += numberChars // Add numbers if selected
+  if (options.symbols) availbleChars += symbolChars // Add symbols if selected
 }
