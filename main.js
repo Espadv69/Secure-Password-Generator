@@ -54,3 +54,15 @@ const generatePassword = () => {
 
   $passwordDisplay.textContent = password // Display the generated password in the DOM
 }
+
+// Function to copy the password to the clipboard
+const copyToClipboard = () => {
+  const password = $passwordDisplay.textContent
+  if (!password) {
+    return ($p_alert.textContent = 'No password to copy!')
+  }
+
+  navigator.clipboard.writeText(password).then(() => {
+    $p_alert.textContent = 'Password copied to clipboard!'
+  })
+}
