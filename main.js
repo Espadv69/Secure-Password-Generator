@@ -59,10 +59,10 @@ const generatePassword = () => {
 const copyToClipboard = () => {
   const password = $passwordDisplay.textContent
   if (!password) {
-    return ($p_alert.textContent = 'No password to copy!')
+    return ($p_alert.textContent = 'No password to copy!') // Show an error message if there's no password
   }
 
   navigator.clipboard.writeText(password).then(() => {
-    $p_alert.textContent = 'Password copied to clipboard!'
+    $p_alert.textContent = 'Password copied to clipboard!' // Notify the user that the password was copied
   })
 }
