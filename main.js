@@ -69,3 +69,6 @@ const copyToClipboard = () => {
 
 // Event listener for the "Generate Password" button
 $generatePassButton.addEventListener('click', generatePassword)
+
+// Event listener for the "Copy to clipboard" button
+$copyButton.addEventListener('click', copyToClipboard)
