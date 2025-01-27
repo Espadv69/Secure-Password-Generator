@@ -47,8 +47,41 @@ button {
   text-align: center;
 }
 
+.length {
+  padding: .2rem;
+  width: 100px;
+
+  border: 2px solid white;
+  border-radius: 5px;
+
+  color: currentColor;
+  background: #0a0a0a;
+}
+
 .checkbox-container {
   display: flex;
   flex-direction: column;
   gap: .4rem;
+}
+
+.generate-password,
+.copy-password {
+  padding: .7rem;
+
+
+  border: 2px solid whitesmoke;
+  border-radius: 8px;
+
+  color: white;
+  background: #0a0a0a;
+
+  transition: color .3s, background .3s, transform .3s;
+}
+
+.generate-password:hover,
+.copy-password:hover {
+  color: #121212;
+  background: #f5f5f583;
+
+  transform: scaleX(.9);
 }
