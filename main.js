@@ -29,13 +29,19 @@ const generatePassword = () => {
 
   // Validate that at leats one option is selected
   if (Object.values(options).every((option) => !option)) {
-    return ($p_alert.textContent = 'Please select at least one character type')
+    return (
+      ($passwordDisplay.textContent = ''),
+      ($p_alert.textContent = 'Please select at least one character type')
+    )
   }
 
   // Validate that the length is within the valid range
   if (length < 6 || length > 20) {
-    return ($p_alert.textContent =
-      'Password length must be between 6 and 20 characters')
+    return (
+      ($passwordDisplay.textContent = ''),
+      ($p_alert.textContent =
+        'Password length must be between 6 and 20 characters')
+    )
   }
 
   // Build the pool of availble characters based on selected options
@@ -52,6 +58,7 @@ const generatePassword = () => {
     password += availbleChars[randomIndex] // Append the corresponding character to the password
   }
 
+  $p_alert.textContent = '' // Clean up
   $passwordDisplay.textContent = password // Display the generated password in the DOM
 }
 
