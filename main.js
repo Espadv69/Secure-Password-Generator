@@ -66,3 +66,6 @@ const copyToClipboard = () => {
     $p_alert.textContent = 'Password copied to clipboard!' // Notify the user that the password was copied
   })
 }
+
+// Event listener for the "Generate Password" button
+$generatePassButton.addEventListener('click', generatePassword)
