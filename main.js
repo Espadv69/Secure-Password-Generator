@@ -44,4 +44,13 @@ const generatePassword = () => {
   if (options.uppercase) availbleChars += uppercaseChars // Add uppercase letters if selected
   if (options.numbers) availbleChars += numberChars // Add numbers if selected
   if (options.symbols) availbleChars += symbolChars // Add symbols if selected
+
+  // Generate the password
+  let password = ''
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * availbleChars.length) // Get a random index
+    password += availbleChars[randomIndex] // Append the corresponding character to the password
+  }
+
+  $passwordDisplay.textContent = password // Display the generated password in the DOM
 }
