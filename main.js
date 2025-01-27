@@ -4,6 +4,7 @@ const $includeLowercase = document.querySelector('.include-lowercase')
 const $includeUppercase = document.querySelector('.include-uppercase')
 const $includeNumbers = document.querySelector('.include-numbers')
 const $includeSymbols = document.querySelector('.include-symbols')
+const $p_alert = document.querySelector('.p-alert')
 const $generatePassButton = document.querySelector('.generate-password')
 const $passwordDisplay = document.querySelector('.password-display')
 const $copyButton = document.querySelector('.copy-password')
@@ -24,5 +25,10 @@ const generatePassword = () => {
     uppercase: $includeUppercase.checked, // Check if uppercase letters should be included
     numbers: $includeNumbers.checked, // Check if numbers should be included
     symbols: $includeSymbols.checked, // Check if symbols should be included
+  }
+
+  // Validate that at leats one option is selected
+  if (Object.values(options).every((option) => !option)) {
+    return $p_alert.textContent = 'Please select at least one character type'
   }
 }
