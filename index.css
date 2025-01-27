@@ -29,3 +29,26 @@ body {
 button {
   cursor: pointer;
 }
+
+.app {
+  margin: 1rem auto;
+  padding: 1rem;
+
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.h1-title {
+  text-align: center;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
